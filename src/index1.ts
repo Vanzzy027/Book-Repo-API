@@ -7,7 +7,7 @@ app.get('/', (c) => {
   return c.text('Hello Hono!  This is Evanson!')
 })
 
-// In-memory books
+// In-memory books done here
 type Book = {
   id: number
   title: string
