@@ -1,0 +1,51 @@
+# Base URL
+@baseUrl = http://localhost:5050
+
+
+//Showing my name
+### Root
+GET {{baseUrl}}/
+
+
+
+### Get all books
+GET {{baseUrl}}/api/books
+
+### Get book by id
+GET {{baseUrl}}/api/books/1
+
+### Search by author 
+GET {{baseUrl}}/api/books?author=Alex
+
+### Searching by title 
+GET {{baseUrl}}/books?title=Node
+
+
+
+
+### Full-text q (title or author)
+GET {{baseUrl}}/books?q=node
+
+### Create a new book
+POST {{baseUrl}}/books
+Content-Type: application/json
+
+{
+  "title": "Hono by Denis",
+  "author": "Wachira Denis",
+  "description": "A book about Hono framework",
+  "published": "2025-09-21",
+  "pages": 127
+}
+
+### Update 
+PUT {{baseUrl}}/books/4
+Content-Type: application/json
+
+{
+  "title": "Hono by Wachira",
+  "pages": 150
+}
+
+### Delete a book
+DELETE {{baseUrl}}/books/7
